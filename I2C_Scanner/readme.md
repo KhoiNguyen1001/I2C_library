@@ -8,11 +8,11 @@
 - Works with any STM32 series that supports HAL.
 
 ## Configuration
-- Update the HAL include in I2C_scanner.h for your target MCU family.
+Update the HAL include in I2C_scanner.h for your target MCU family.
 
 	#include "stm32f4xx_hal.h"   // e.g., stm32f1xx_hal.h for F1 series
 
-- Initialize your I2C peripheral in CubeMX or manually in your code before calling the scanner.
+Initialize your I2C peripheral in CubeMX or manually in your code before calling the scanner.
 
 ### 1. Add Files
 Copy `I2C_scanner.c` and `I2C_scanner.h` into your project.
@@ -24,9 +24,3 @@ In your application code:  #include "I2C_scanner.h"
 Call the function after initializing I2C.
 
 	I2C_Scan(&hi2c1);		// hi2c1 must be initialized in CubeMX
-
-
-
-
-
-
