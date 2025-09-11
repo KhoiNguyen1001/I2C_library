@@ -17,3 +17,4 @@
 
 ### 3. Begin scanning
 	I2C_Scan(&hi2c1); 		// hi2c1 must be initialized in CubeMX
+
