@@ -8,7 +8,7 @@ extern uint8_t lcd_addr;
 
 // Handle and address are configurable by user
 void lcd_init(I2C_HandleTypeDef *hi2c, uint8_t address);
-void lcd_send_string_at (char *str, int row_ptr, int col_ptr)
+void lcd_send_string_at (char *str, uint8_t row_ptr, uint8_t col_ptr);
 
 // Optional helpers
 void lcd_clear(void);
