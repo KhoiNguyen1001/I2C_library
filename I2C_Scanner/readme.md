@@ -16,10 +16,13 @@
 - Copy `I2C_scanner.c` and `I2C_scanner.h` into your project.
 
 ### 2. Include Header
-- In your application code:  #include "I2C_scanner.h"
+- In your application code:
+
+	#include "I2C_scanner.h"
 
 ### 3. Begin scanning
 	I2C_Scan(&hi2c1); 		// hi2c1 must be initialized in CubeMX
+
 
 
 
