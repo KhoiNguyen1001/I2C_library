@@ -22,7 +22,9 @@
 
 ### 3. Run the Scanner
 - Call the function after initializing I2C:
+
 	I2C_Scan(&hi2c1); 		// hi2c1 must be initialized in CubeMX
+
 
 
 
