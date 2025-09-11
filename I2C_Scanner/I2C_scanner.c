@@ -1,9 +1,10 @@
-#include "i2c_scanner.h"
+#include "I2C_scanner.h"
+#include <stdbool.h>
 #include <stdio.h>   // for printf
 
 uint8_t i2c_address[127];
 
-void I2C_Scan(I2C_HandleTypeDef *hi2c)
+uint8_t I2C_Scan(I2C_HandleTypeDef *hi2c)
 {
     HAL_StatusTypeDef result;
     uint8_t i, temp = 0;
@@ -26,5 +27,9 @@ void I2C_Scan(I2C_HandleTypeDef *hi2c)
         }
     }
 
+	if(temp > 0)
+		return temp;
+	else
+		return false;
     //printf("Scan complete.\r\n");
 }
