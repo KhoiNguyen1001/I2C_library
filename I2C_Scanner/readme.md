@@ -6,6 +6,7 @@
 ## Configuration
 - Change the HAL include line in i2c_lcd.h to match your target MCU:
 	#include "stm32f4xx_hal.h"   // e.g., stm32f1xx_hal.h for F1 series
+
 - Init all things in STM32MXCube or init I2C by yourself in your code. 
 ---
 
@@ -17,4 +18,5 @@
 
 ### 3. Begin scanning
 	I2C_Scan(&hi2c1); 		// hi2c1 must be initialized in CubeMX
+
 
