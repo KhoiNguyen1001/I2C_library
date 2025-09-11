@@ -13,7 +13,7 @@
 ---
 
 ## Configuration
-Change the HAL include line in i2c_lcd.h to match your target MCU:
+Change the HAL include line in i2c_lcd.h to match your target MCU.
 
 	#include "stm32f4xx_hal.h"   // e.g., stm32f1xx_hal.h for F1 series
 
