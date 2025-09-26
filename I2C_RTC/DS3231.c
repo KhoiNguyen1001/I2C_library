@@ -1,3 +1,4 @@
+/* Includes ------------------------------------------------------------------*/
 #include "DS3231.h"
 #include "string.h"
 #include "stm32f4xx_hal_i2c.h"
