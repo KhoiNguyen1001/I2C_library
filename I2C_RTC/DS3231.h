@@ -1,6 +1,11 @@
 #ifndef DS3231_H
 #define DS3231_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
 #include "stm32f4xx_hal.h"   // or your MCU HAL
 
@@ -73,4 +78,8 @@ HAL_StatusTypeDef DS3231_Enable32kHz(DS3231_HandleTypeDef *DS3231_Handle, uint8_
 uint8_t DS3231_OscillatorStopped(DS3231_HandleTypeDef *DS3231_Handle);
 HAL_StatusTypeDef DS3231_ClearOscillatorStopFlag(DS3231_HandleTypeDef *DS3231_Handle);
 
+#ifdef __cplusplus
+}
 #endif
+
+#endif /* __DS3231_H */
