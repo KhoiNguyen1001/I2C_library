@@ -9,21 +9,25 @@
 - Works with STM32 HAL (`stm32fxxx_hal.h`)
 
 ## Configuration
-Change the HAL include line in i2c_lcd.h to match your target MCU.
+Change the HAL include line in I2C_LCD.h to match your target MCU.
 
 	#include "stm32f4xx_hal.h"   // e.g., stm32f1xx_hal.h for F1 series
 
 ### 1. Add Files
-- Copy `i2c_lcd.c` and `i2c_lcd.h` into your STM32CubeIDE project.
+- Copy `I2C_LCD.c` and `I2C_LCD.h` into your STM32CubeIDE project.
 
 ### 2. Include Header
-- In your application code:  #include "i2c_lcd.h"
+- In your application code:  #include "I2C_LCD.h"
 
+### 3. Declare a struct variable
+- Declare a variable of type LCD_HandleTypeDef as a local or global variable.
 
-### 3. Initialize LCD
+	LCD_HandleTypeDef lcd_handler;
 
-	lcd_init(&hi2c1, 0x27);   // hi2c1 must be initialized in CubeMX
-	lcd_clear();
-	lcd_put_cur(0, 0);
-	lcd_send_string("Hello, World!");
-	lcd_send_string_at("STM32 LCD", 1, 0);  // row 1, col 0
+### 4. Initialize LCD
+
+	LCD_Init(&lcd_handler, &hi2c1, 0x27<<1);   // hi2c1 must be initialized in CubeMX, 0x27 is the I2C address of I2C module.
+	LCD_Clear(&lcd_handler);
+	LCD_PutCur(&lcd_handler, 0, 0);
+	LCD_SendString(&lcd_handler, "Hello, World!");
+	LCD_SendStringAt(&lcd_handler, "STM32 LCD", 1, 0);  // row 1, col 0
