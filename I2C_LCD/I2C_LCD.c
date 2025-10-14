@@ -1,4 +1,4 @@
-#include "I2C_LCD_OOP1.h"
+#include "I2C_LCD.h"
 #include "string.h"
 
 /* Private helpers */
