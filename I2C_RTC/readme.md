@@ -26,17 +26,17 @@ Create a DS3231 handler and a time/date structure as either local or global vari
   DS3231_TimeDate td;
 
 ### 4. Initialize and Use
-
+	
 	DS3231_Init(&DS3231_Handler, &hi2c, 0x68 << 1);   // hi2c1 must be initialized in CubeMX, 0x68 is the I2C address of DS3231.
-  
-  memset(&td,0,sizeof(td));
-  td.day = 10;
-  td.dayOfWeek = 5;
-  td.hours = 10;
-  td.year = 2025;
-  
-  DS3231_SetTimeDate(&DS3231_Handler, &td);
+	
+	memset(&td,0,sizeof(td));
+	td.day = 10;
+	td.dayOfWeek = 5;
+	td.hours = 10;
+	td.year = 2025;
+	
+	DS3231_SetTimeDate(&DS3231_Handler, &td);
 	DS3231_GetTimeDate(&DS3231_Handler, &td);
-
-  float temperature;
-  DS3231_GetTemperature(&DS3231_Handler, &temperature);   // returns temperature in °C
+	
+	float temperature;
+	DS3231_GetTemperature(&DS3231_Handler, &temperature);   // returns temperature in °C
