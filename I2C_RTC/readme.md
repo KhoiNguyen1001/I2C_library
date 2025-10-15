@@ -23,7 +23,7 @@ In your application code:
 Create a DS3231 handler and a time/date structure as either local or global variables:
 
 	DS3231_HandleTypeDef DS3231_Handler;
-  DS3231_TimeDate td;
+	DS3231_TimeDate td;
 
 ### 4. Initialize and Use
 	
