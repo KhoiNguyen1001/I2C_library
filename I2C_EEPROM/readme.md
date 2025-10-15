@@ -1,4 +1,4 @@
-# I2C Real-Time Clock Library for STM32 (HAL)
+# I2C EEPROM Library for STM32 (HAL)
 - This library provides functions to interface with the AT24C32 EEPROM using the STM32 HAL I2C driver.
 
 ## Features
