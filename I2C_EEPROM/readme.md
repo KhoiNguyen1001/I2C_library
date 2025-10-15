@@ -25,20 +25,20 @@ Create a AT24C32 handler, as either local or global variables:
 
 ### 4. Initialize and Use
 	
-AT24C32_Init(&AT24C32_Handler, &hi2c1, 0x57 << 1);   // hi2c1 must be initialized in CubeMX; 0x57 is the I2C address of the AT24C32
-
-uint8_t eeprom_data[4];
-
-// Write a single byte
-AT24C32_WriteByte(&AT24C32_Handler, 0x00, 0xF0);
-
-// Read a single byte
-AT24C32_ReadByte(&AT24C32_Handler, 0x00, &eeprom_data[0]);
-
-// Read multiple bytes into buffer
-AT24C32_ReadBuffer(&AT24C32_Handler, 0x00, eeprom_data, sizeof(eeprom_data));
-
-// Write multiple bytes to one page
-uint8_t eeprom_write[4] = {0x04, 0x05, 0x06, 0x07};
-AT24C32_WritePage(&AT24C32_Handler, 0x04, eeprom_write, sizeof(eeprom_write));
+	AT24C32_Init(&AT24C32_Handler, &hi2c1, 0x57 << 1);   // hi2c1 must be initialized in CubeMX; 0x57 is the I2C address of the AT24C32
+	
+	uint8_t eeprom_data[4];
+	
+	// Write a single byte
+	AT24C32_WriteByte(&AT24C32_Handler, 0x00, 0xF0);
+	
+	// Read a single byte
+	AT24C32_ReadByte(&AT24C32_Handler, 0x00, &eeprom_data[0]);
+	
+	// Read multiple bytes into buffer
+	AT24C32_ReadBuffer(&AT24C32_Handler, 0x00, eeprom_data, sizeof(eeprom_data));
+	
+	// Write multiple bytes to one page
+	uint8_t eeprom_write[4] = {0x04, 0x05, 0x06, 0x07};
+	AT24C32_WritePage(&AT24C32_Handler, 0x04, eeprom_write, sizeof(eeprom_write));
 
